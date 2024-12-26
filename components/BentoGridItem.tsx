@@ -83,19 +83,18 @@ export const BentoGridItem = ({
             className="flex h-full w-full justify-center items-center p-4 lg:p-0 cursor-pointer"
             onClick={() => {
               if (id === 5) {
-                {
+                if (navigator.clipboard) {
                   navigator.clipboard
-                    ? navigator.clipboard
-                        .writeText("prosissestha8@gmail.com")
-                        .then(() => {
-                          toast("Email copied to clipboard!");
-                        })
-                        .catch((err) => {
-                          console.error("Failed to copy email:", err);
-                          window.location.href =
-                            "mailto:prosissestha8@gmail.com";
-                        })
-                    : (window.location.href = "mailto:prosissestha8@gmail.com");
+                    .writeText("prosissestha8@gmail.com")
+                    .then(() => {
+                      toast("Email copied to clipboard!");
+                    })
+                    .catch((err) => {
+                      console.error("Failed to copy email:", err);
+                      window.location.href = "mailto:prosissestha8@gmail.com";
+                    });
+                } else {
+                  window.location.href = "mailto:prosissestha8@gmail.com";
                 }
               } else if (id === 6) {
                 window.open("https://github.com/prosis-shrestha", "_blank");
