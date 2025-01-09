@@ -206,7 +206,7 @@ const ProjectLinks = () => {
     {
       name: "AttenD",
       href: "https://github.com/prosis-shrestha/AttenD",
-      languages: ["JavaScript", "SQL", "Python"],
+      languages: ["JavaScript", "SQL", "Python", "Framer Motion"],
       thumbnail: "2.png",
       desc: "AttenD, your event intelligence hub, captures attendee details, compiles stall reviews, and showcases it all in a sleek dashboard. Elevate your event analysis with AttenD's dynamic features!",
       inProgress: true,
