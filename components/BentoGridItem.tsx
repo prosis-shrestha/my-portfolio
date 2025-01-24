@@ -70,17 +70,19 @@ export const BentoGridItem = ({
       <Toaster position="top-right" />
       <div className="h-full group">
         {img && (
+          // <div className="absolute -right-5 -bottom-1">
           <div className="absolute -right-5 -bottom-1">
             <img
               src={img}
               alt={title?.toString()}
-              className="object-cover object-center group-hover:translate-x-2 transition-transform duration-300"
+              className=" w-48 sm:w-80 group-hover:translate-x-2 transition-transform duration-300"
+              // className="object-cover object-center group-hover:translate-x-2 transition-transform duration-300"
             />
           </div>
         )}
         {id === 5 || id === 6 || id === 7 ? (
           <div
-            className="flex h-full w-full justify-center items-center p-4 lg:p-0 cursor-pointer"
+            className="flex h-full w-full justify-center items-center p-4 lg:p-0 cursor-pointer text-5xl"
             onClick={() => {
               if (id === 5) {
                 if (navigator.clipboard) {
@@ -107,11 +109,11 @@ export const BentoGridItem = ({
             }}
           >
             {id === 5 ? (
-              <FaEnvelope size={50} />
+              <FaEnvelope />
             ) : id === 6 ? (
-              <FaGithub size={50} />
+              <FaGithub />
             ) : (
-              id === 7 && <FaLinkedin size={50} />
+              id === 7 && <FaLinkedin />
             )}
           </div>
         ) : id === 3 ? (
@@ -125,6 +127,7 @@ export const BentoGridItem = ({
           </div>
         ) : (
           <div className={`flex flex-col h-full ${getTitleClassName()}`}>
+            {/* <h2 className="font-sans text-3xl font-bold z-10">{title}</h2> */}
             <h2 className="font-sans text-3xl font-bold z-10">{title}</h2>
             <p className="font-sans font-extralight text-base text-[#C1C2D3] z-10">
               {description}
@@ -146,7 +149,7 @@ const TechStack = () => {
   ];
 
   return (
-    <div className="flex gap-1 lg:gap-20 md:gap-10 absolute justify-center right-2 sm:right-5 opacity-50 sm:opacity-80 ">
+    <div className="flex gap-1 lg:gap-20 md:gap-10 3xl:gap-28 absolute justify-center right-2 sm:right-5 opacity-50 sm:opacity-80 ">
       {techLists.map((list, listIndex) => (
         <div
           key={listIndex}
@@ -157,7 +160,7 @@ const TechStack = () => {
           {list.map((item, itemIndex) => (
             <span
               key={itemIndex}
-              className="py-4 px-3 text-xs lg:text-base md:text-base rounded-lg text-center bg-[#212121]"
+              className="py-4 px-3 text-xs 3xl:py-5 3xl:px-4 md:text-base 3xl:text-xl rounded-lg text-center bg-[#212121]"
             >
               {item}
             </span>
@@ -239,7 +242,7 @@ const ProjectLinks = () => {
           >
             <img
               src={project.thumbnail}
-              className="h-20 w-2/5 sm:w-1/5 rounded-s-2xl object-cover"
+              className="h-30 w-2/5 sm:w-1/5 rounded-s-2xl object-cover"
             />
             <div className="flex flex-col justify-center px-6 w-3/5 sm:w-4/5 items-start gap-1 font-sans">
               <h1 className=" font-medium truncate text-lg w-full">

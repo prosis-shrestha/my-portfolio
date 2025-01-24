@@ -15,7 +15,7 @@ export const gridItems = [
     },
     {
       id: 3,
-      title: "CV",
+      title: "Resume",
       description: "My Curriculum vitae",
       img: "/file.svg",
     },
