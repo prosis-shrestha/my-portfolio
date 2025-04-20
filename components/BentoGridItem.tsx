@@ -208,8 +208,16 @@ const ProjectLinks = () => {
     },
     {
       name: "AttenD",
-      href: "https://github.com/prosis-shrestha/AttenD",
-      languages: ["JavaScript", "SQL", "Python", "Framer Motion"],
+      href: "https://frontend-production-d1aa.up.railway.app/",
+      languages: [
+        "React",
+        "Express",
+        "Node",
+        "Framer Motion",
+        "Socket.io",
+        "PostgreSQL",
+        "Docker",
+      ],
       thumbnail: "2.png",
       desc: "AttenD, your event intelligence hub, captures attendee details, compiles stall reviews, and showcases it all in a sleek dashboard. Elevate your event analysis with AttenD's dynamic features!",
       inProgress: true,
