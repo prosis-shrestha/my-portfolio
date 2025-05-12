@@ -146,6 +146,7 @@ const TechStack = () => {
     ["ExpressJS", "Git"],
     ["ReactJS", "Typescript"],
     ["NodeJS", "NextJS"],
+    // ["Docker", ""],
   ];
 
   return (
@@ -200,11 +201,18 @@ const ProjectLinks = () => {
     },
     {
       name: "Thrifitfy - C2C webapp for buying and selling",
-      href: "https://github.com/prosis-shrestha/Thriftify",
-      languages: ["MERN", "TypeScript", "Socket.io", "Stripe", "Leaflet"],
+      href: "https://thriftify-lyart.vercel.app/",
+      languages: [
+        "MERN",
+        "TypeScript",
+        "Socket.io",
+        "Stripe",
+        "Leaflet",
+        "Python",
+      ],
       thumbnail: "1.png",
       desc: "MERN Stack application for buy and sell of wearables with messaging, product boosting and nearby items suggestion features along with chatbot integration.",
-      inProgress: true,
+      inProgress: false,
     },
     {
       name: "AttenD",
