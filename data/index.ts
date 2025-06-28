@@ -4,7 +4,7 @@ export const gridItems = [
     {
       id: 1,
       title: "Prosis Shrestha",
-      description: "Computer Engineering Student",
+      description: "Computer Engineer",
       img: "",
     },
     {
