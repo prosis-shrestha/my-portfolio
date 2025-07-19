@@ -144,33 +144,50 @@ const TechStack = () => {
   const techLists = [
     ["MongoDB", "SQL"],
     ["ExpressJS", "AWS"],
-    // ["ExpressJS", "Git"],
-    // ["ReactJS", "Typescript"],
     ["ReactJS", "Linux"],
     ["NodeJS", "Docker"],
-    // ["NodeJS", "NextJS"],
+    ["NextJS", "Cloud"],
+    ["Typescript", "Security"],
   ];
 
   return (
-    <div className="flex gap-1 lg:gap-20 md:gap-10 3xl:gap-28 absolute justify-center right-2 sm:right-5 opacity-50 sm:opacity-80 ">
-      {techLists.map((list, listIndex) => (
-        <div
-          key={listIndex}
-          className={`flex flex-col gap-8 ${
-            listIndex % 2 !== 0 ? "relative -bottom-6" : ""
-          }`}
-        >
-          {list.map((item, itemIndex) => (
-            <span
-              key={itemIndex}
-              className="py-4 px-3 text-xs 3xl:py-5 3xl:px-4 md:text-base 3xl:text-xl rounded-lg text-center bg-[#212121]"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="hidden md:flex gap-10 absolute right-2 opacity-80 lg:gap-20">
+        {techLists.map((list, listIndex) => (
+          <div
+            key={listIndex}
+            className={`flex flex-col gap-8 ${
+              listIndex % 2 !== 0 ? "relative -bottom-6" : ""
+            }`}
+          >
+            {list.map((item, itemIndex) => (
+              <span
+                key={itemIndex}
+                className="py-4 px-3 text-xs 3xl:py-5 3xl:px-4 md:text-base 3xl:text-xl rounded-lg text-center bg-[#212121]"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile view */}
+      <div className="md:hidden grid grid-cols-3 gap-4 mt-6">
+        {techLists.map((list, listIndex) => (
+          <div key={listIndex} className="flex flex-col gap-4">
+            {list.map((item, itemIndex) => (
+              <span
+                key={itemIndex}
+                className="py-4 px-3 text-xs rounded-lg text-center bg-[#212121]"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
