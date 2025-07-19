@@ -143,10 +143,12 @@ export const BentoGridItem = ({
 const TechStack = () => {
   const techLists = [
     ["MongoDB", "SQL"],
-    ["ExpressJS", "Git"],
-    ["ReactJS", "Typescript"],
-    ["NodeJS", "NextJS"],
-    // ["Docker", ""],
+    ["ExpressJS", "AWS"],
+    // ["ExpressJS", "Git"],
+    // ["ReactJS", "Typescript"],
+    ["ReactJS", "Linux"],
+    ["NodeJS", "Docker"],
+    // ["NodeJS", "NextJS"],
   ];
 
   return (
