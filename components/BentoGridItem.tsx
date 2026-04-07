@@ -68,7 +68,10 @@ export const BentoGridItem = ({
       className={`relative overflow-hidden rounded-3xl border border-white/0 hover:border-white/20 group transition duration-200 shadow-lg bg-[#141414] flex flex-col justify-between  ${getItemClassName()}`}
     >
       <Toaster position="top-right" />
-      <div className="h-full group">
+      <div
+        className="h-full group"
+        onClick={id === 3 ? () => window.open("cv.pdf", "_blank") : undefined}
+      >
         {img && (
           // <div className="absolute -right-5 -bottom-1">
           <div className="absolute -right-5 -bottom-1">
@@ -103,7 +106,7 @@ export const BentoGridItem = ({
               } else if (id === 7) {
                 window.open(
                   "https://www.linkedin.com/in/prosis-shrestha-a1278422a/",
-                  "_blank"
+                  "_blank",
                 );
               }
             }}
@@ -204,18 +207,19 @@ const ProjectLinks = () => {
 
   const projects = [
     {
-      name: "First Call - Ambulance Service",
-      href: "https://first-call-frontend.onrender.com/",
+      name: "AttenD",
+      href: "https://attend-production-806c.up.railway.app/",
       languages: [
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "MongoDB",
+        "React",
+        "Express",
+        "Node",
+        "Framer Motion",
         "Socket.io",
-        "Leaflet.js",
+        "PostgreSQL",
+        "Docker",
       ],
-      thumbnail: "3.png",
-      desc: "First Call is a web app enabling quick access to available ambulances via map markers. It displays real-time routes, ensuring efficient navigation and rapid emergency assistance when needed.",
+      thumbnail: "2.png",
+      desc: "AttenD, your event intelligence hub, captures attendee details, compiles stall reviews, and showcases it all in a sleek dashboard. Elevate your event analysis with AttenD's dynamic features!",
       inProgress: false,
     },
     {
@@ -234,19 +238,18 @@ const ProjectLinks = () => {
       inProgress: false,
     },
     {
-      name: "AttenD",
-      href: "https://attend-production-806c.up.railway.app/",
+      name: "First Call - Ambulance Service",
+      href: "https://first-call-frontend.onrender.com/",
       languages: [
-        "React",
-        "Express",
-        "Node",
-        "Framer Motion",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
         "Socket.io",
-        "PostgreSQL",
-        "Docker",
+        "Leaflet.js",
       ],
-      thumbnail: "2.png",
-      desc: "AttenD, your event intelligence hub, captures attendee details, compiles stall reviews, and showcases it all in a sleek dashboard. Elevate your event analysis with AttenD's dynamic features!",
+      thumbnail: "3.png",
+      desc: "First Call is a web app enabling quick access to available ambulances via map markers. It displays real-time routes, ensuring efficient navigation and rapid emergency assistance when needed.",
       inProgress: false,
     },
   ];

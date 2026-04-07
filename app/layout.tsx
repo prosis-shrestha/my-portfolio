@@ -31,6 +31,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="sticky top-0 z-50 w-full border-b border-white/10 bg-[#0b0b0b]/80 backdrop-blur-md">
+          <div className="mx-auto max-w-7xl px-4 py-2 text-center text-xs sm:text-sm font-light text-[#C1C2D3]">
+            Haven&apos;t upgraded the site and projects since long except{" "}
+            <span className="font-medium text-white">RESUME</span>. You can
+            still browse all without hassle 😊
+          </div>
+        </div>
         <Providers>{children}</Providers>
       </body>
     </html>
